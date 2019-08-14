@@ -1,12 +1,16 @@
 
-export const initialState = { features: []}
+export const initialState = { features: []};
 
 export const reducer = (state = initialState, action) => {
     switch(action.type) {
         case 'ADD_FEATURE':
-            return{}
+            return{
+                ...state,
+            }
         case 'REMOVE_FEATURE':
-            return{}
+            return{
+                ...state,
+            }
         default:
             return state;
     }
