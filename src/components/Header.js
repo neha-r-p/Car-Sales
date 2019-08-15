@@ -1,5 +1,5 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
 const Header = props => {
   return (
@@ -13,4 +13,14 @@ const Header = props => {
   );
 };
 
-export default connect({})(Header);
+const mapStateToProps = state => {
+  console.log("state", state)
+  return{
+    
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  {}
+)(Header);
