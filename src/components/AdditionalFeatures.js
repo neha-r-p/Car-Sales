@@ -22,7 +22,7 @@ const AdditionalFeatures = props => {
 const mapStateToProps = state => {
   console.log("state", state);
   return {
-    state: state.store
+    store: state.store,
   };
 };
 
