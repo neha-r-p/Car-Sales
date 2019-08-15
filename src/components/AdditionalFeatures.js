@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import AdditionalFeature from "./AdditionalFeature";
+import { addFeature } from "../actions";
 
 const AdditionalFeatures = props => {
   return (
@@ -9,7 +10,11 @@ const AdditionalFeatures = props => {
       {props.store.length ? (
         <ol type="1">
           {props.store.map(item => (
-            <AdditionalFeature key={item.id} feature={item} />
+            <AdditionalFeature
+              key={item.id}
+              feature={item}
+              addFeature={props.addFeature}
+            />
           ))}
         </ol>
       ) : (
@@ -20,13 +25,13 @@ const AdditionalFeatures = props => {
 };
 
 const mapStateToProps = state => {
-  console.log("state", state);
+  console.log("additional feat", state);
   return {
-    store: state.store,
+    store: state.store
   };
 };
 
 export default connect(
   mapStateToProps,
-  {}
+  { addFeature }
 )(AdditionalFeatures);
