@@ -20,11 +20,11 @@ const AdditionalFeatures = props => {
 };
 
 const mapStateToProps = state => {
-  console.log("state", state)
-  return{
-    
-  }
-}
+  console.log("state", state);
+  return {
+    state: state.store
+  };
+};
 
 export default connect(
   mapStateToProps,
